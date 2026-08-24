@@ -86,19 +86,21 @@
             padding: 12px 20px;
         }
 
-        /* Inline Logo Container */
+        /* Vertical Logo Container (Image stacked above Text) */
         .logo {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: bold;
             color: var(--accent-color);
             text-decoration: none;
             display: flex;
+            flex-direction: column; /* Places logo image directly above title text */
             align-items: center;
-            gap: 10px; /* Space between logo image and text */
+            justify-content: center;
+            gap: 4px;
         }
 
         .logo-img {
-            height: 38px; /* Adjustable logo height */
+            height: 45px; /* Sized to sit cleanly above text */
             width: auto;
             object-fit: contain;
         }
@@ -214,7 +216,7 @@
         /* --- Content Views (Tab Control) --- */
         .app-view {
             display: none; /* Hide every section initially */
-            margin-top: 70px; /* Push below header */
+            margin-top: 90px; /* Adjusted spacing for taller header */
             animation: fadeIn 0.4s ease forwards;
         }
 
@@ -231,7 +233,7 @@
         /* --- Hero Section Fixes for App Style --- */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)), url('Chickens.jpg') no-repeat center center/cover;
-            height: calc(100vh - 70px); /* Fill the screen window perfectly */
+            height: calc(100vh - 90px); /* Fill the screen window perfectly */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -437,10 +439,10 @@
                 width: 145px;
             }
             .app-view {
-                margin-top: 135px;
+                margin-top: 155px;
             }
             .hero {
-                height: calc(100vh - 135px);
+                height: calc(100vh - 155px);
             }
         }
     </style>
