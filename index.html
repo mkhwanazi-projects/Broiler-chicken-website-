@@ -86,11 +86,21 @@
             padding: 12px 20px;
         }
 
+        /* Inline Logo Container */
         .logo {
             font-size: 22px;
             font-weight: bold;
             color: var(--accent-color);
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Space between logo image and text */
+        }
+
+        .logo-img {
+            height: 38px; /* Adjustable logo height */
+            width: auto;
+            object-fit: contain;
         }
 
         .nav-right {
@@ -439,7 +449,10 @@
 
     <header>
         <div class="nav-container">
-            <a href="#" class="logo" onclick="switchView('home', this)">NTUZE PRIME FARM </a>
+            <a href="#" class="logo" onclick="switchView('home', this)">
+                <img src="Logo.jpg" alt="Logo" class="logo-img">
+                <span>NTUZE PRIME FARM</span>
+            </a>
             <div class="nav-right">
                 <ul class="nav-links">
                     <li>
