@@ -25,17 +25,21 @@
             --card-bg: #ffffff;
             --text-color: #333333;
             --text-muted: #666666;
-            --text-title: #222222;
+            --text-title: #05482e; /* Forest Green Title */
             --header-bg: #ffffff;
             --border-color: #cccccc;
             --input-border: #cccccc;
-            --accent-color: #e65c00;
-            --accent-hover: #cc5200;
+
+            /* Palette Extracted from Logo */
+            --accent-color: #05482e; /* Forest Green */
+            --accent-hover: #033220; /* Darker Forest Green */
+            --gold-accent: #c69230;  /* Logo Gold Accent */
+            --gold-hover: #a87922;
 
             /* Floating Pill Config */
             --pill-bg: rgba(0, 0, 0, 0.06);
             --pill-item-bg: rgba(0, 0, 0, 0.04);
-            --pill-active-bg: #444444;
+            --pill-active-bg: #05482e;
             --pill-active-text: #ffffff;
             --pill-text: #333333;
         }
@@ -47,7 +51,7 @@
             --card-bg: #1e1e1e;
             --text-color: #e0e0e0;
             --text-muted: #aaaaaa;
-            --text-title: #ffffff;
+            --text-title: #22a06b; /* Brighter Green for Dark Mode */
             --header-bg: #1f1f1f;
             --border-color: #444444;
             --input-border: #444444;
@@ -55,7 +59,7 @@
             /* Floating Pill Config Dark */
             --pill-bg: rgba(255, 255, 255, 0.07);
             --pill-item-bg: rgba(255, 255, 255, 0.03);
-            --pill-active-bg: var(--accent-color);
+            --pill-active-bg: var(--gold-accent);
             --pill-active-text: #ffffff;
             --pill-text: #e0e0e0;
         }
@@ -86,14 +90,14 @@
             padding: 12px 20px;
         }
 
-        /* Vertical Logo Container (Image stacked above Text) */
+        /* Vertical Logo Container */
         .logo {
             font-size: 20px;
             font-weight: bold;
-            color: var(--accent-color);
+            color: var(--accent-color); /* Green text topic */
             text-decoration: none;
             display: flex;
-            flex-direction: column; /* Places logo image directly above title text */
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             gap: 4px;
@@ -103,7 +107,7 @@
             height: 100px;
             width: 100px;
             object-fit: cover;
-            border-radius: 80%; /* Trims outer square edges into a circular crop */
+            border-radius: 80%;
         }
 
         .nav-right {
@@ -120,7 +124,7 @@
             gap: 10px;
             background-color: var(--pill-bg);
             padding: 6px 12px;
-            border-radius: 999px; /* Pill Container Wrap */
+            border-radius: 999px;
             border: 1px solid var(--border-color);
             backdrop-filter: blur(8px);
         }
@@ -137,7 +141,7 @@
             color: var(--pill-text);
             background-color: var(--pill-item-bg);
             height: 44px;
-            width: 44px; /* Starts completely round showing just the icon */
+            width: 44px;
             border-radius: 999px;
             gap: 0px;
             padding: 0 10px;
@@ -149,7 +153,7 @@
             transition: width .45s cubic-bezier(.22, 1, .36, 1), background-color .3s ease, box-shadow .3s ease, color .3s;
         }
 
-        /* Center the icon within the closed bubble */
+        /* Center icon */
         .menu-item .material-symbols-outlined {
             font-size: 22px;
             min-width: 24px;
@@ -180,14 +184,13 @@
 
         /* Expanding triggers on hover */
         .menu-item:hover:not(.active-pill) {
-            width: 160px; /* Expands open gracefully to hold text */
-            background-color: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 0 20px rgba(230, 92, 0, 0.15);
+            width: 160px;
+            background-color: rgba(5, 72, 46, 0.1);
+            box-shadow: 0 0 20px rgba(5, 72, 46, 0.2);
             gap: 8px;
             color: var(--accent-color);
         }
 
-        /* Turn text tags on when parent width scales out */
         .menu-item:hover:not(.active-pill) .menu-label {
             opacity: 1;
             max-width: 100px;
@@ -216,12 +219,11 @@
 
         /* --- Content Views (Tab Control) --- */
         .app-view {
-            display: none; /* Hide every section initially */
-            margin-top: 90px; /* Adjusted spacing for taller header */
+            display: none;
+            margin-top: 140px;
             animation: fadeIn 0.4s ease forwards;
         }
 
-        /* Show active section */
         .app-view.active-view {
             display: block;
         }
@@ -231,10 +233,10 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* --- Hero Section Fixes for App Style --- */
+        /* --- Hero Section --- */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)), url('Chickens.jpg') no-repeat center center/cover;
-            height: calc(100vh - 90px); /* Fill the screen window perfectly */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('Chickens.jpg') no-repeat center center/cover;
+            height: calc(100vh - 140px);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -258,7 +260,7 @@
         }
 
         .btn {
-            background-color: var(--accent-color);
+            background-color: var(--gold-accent);
             color: white;
             padding: 12px 30px;
             text-decoration: none;
@@ -271,7 +273,7 @@
         }
 
         .btn:hover {
-            background-color: var(--accent-hover);
+            background-color: var(--gold-hover);
         }
 
         /* --- Main Content Layout --- */
@@ -286,7 +288,7 @@
             font-size: 32px;
             margin-bottom: 40px;
             position: relative;
-            color: var(--text-title);
+            color: var(--text-title); /* Forest Green Topic Header */
         }
 
         .section-title::after {
@@ -294,7 +296,7 @@
             display: block;
             width: 60px;
             height: 3px;
-            background-color: var(--accent-color);
+            background-color: var(--gold-accent); /* Gold Accent Line Under Topics */
             margin: 10px auto 0;
         }
 
@@ -311,11 +313,12 @@
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent-color);
         }
 
         .feature-card h3 {
             margin-bottom: 15px;
-            color: var(--accent-color);
+            color: var(--text-title);
         }
 
         /* --- Products Section --- */
@@ -355,7 +358,7 @@
         .price {
             font-size: 24px;
             font-weight: bold;
-            color: var(--accent-color);
+            color: var(--gold-accent);
             margin-bottom: 15px;
         }
 
@@ -406,7 +409,7 @@
 
         /* --- Footer --- */
         footer {
-            background-color: #111111;
+            background-color: #032115;
             color: #bbb;
             text-align: center;
             padding: 20px;
@@ -435,15 +438,14 @@
                 padding: 4px 8px;
                 -webkit-overflow-scrolling: touch;
             }
-            /* Make expanding responsive for thumbs on touch displays */
             .menu-item:active, .menu-item:hover {
                 width: 145px;
             }
             .app-view {
-                margin-top: 155px;
+                margin-top: 195px;
             }
             .hero {
-                height: calc(100vh - 155px);
+                height: calc(100vh - 195px);
             }
         }
     </style>
@@ -591,32 +593,25 @@
     </footer>
 
     <script>
-        // --- View Controller Logic (Tabs instead of Scrolling) ---
+        // --- View Controller Logic ---
         function switchView(viewId, element) {
-            // Hide all views
             const views = document.querySelectorAll('.app-view');
             views.forEach(view => view.classList.remove('active-view'));
 
-            // Remove active style from all navigation links
             const pills = document.querySelectorAll('.menu-item');
             pills.forEach(pill => pill.classList.remove('active-pill'));
 
-            // Show target view
             document.getElementById('view-' + viewId).classList.add('active-view');
 
-            // Set current nav button to active look (if called from a nav button)
             if (element && element.classList.contains('menu-item')) {
                 element.classList.add('active-pill');
             } else {
-                // Default fallback to highlight Home if logo is clicked
                 document.querySelector('.nav-links li:first-child .menu-item').classList.add('active-pill');
             }
 
-            // Scroll back to top smoothly so new view starts fresh
             window.scrollTo({ top: 0 });
         }
 
-        // Inside page shortcut to jump right to order screen
         function goToOrder() {
             const contactPill = document.querySelectorAll('.menu-item')[3];
             switchView('contact', contactPill);
