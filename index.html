@@ -172,13 +172,14 @@
         .menu-item.active-pill {
             background-color: var(--pill-active-bg) !important;
             color: var(--pill-active-text) !important;
-            width: 110px; 
+            width: auto !important; /* Dynamic sizing accommodates long pill text */
+            padding: 0 16px;
             gap: 8px;
             box-shadow: none !important;
         }
         .menu-item.active-pill .menu-label {
             opacity: 1;
-            max-width: 100px;
+            max-width: 120px;
             transform: translateX(0);
         }
 
@@ -193,7 +194,7 @@
 
         .menu-item:hover:not(.active-pill) .menu-label {
             opacity: 1;
-            max-width: 100px;
+            max-width: 120px;
             transform: translateX(0);
         }
 
@@ -421,15 +422,26 @@
         @media (max-width: 768px) {
             .nav-container {
                 flex-direction: column;
-                gap: 12px;
+                gap: 8px;
                 text-align: center;
-                padding: 12px 5px;
+                padding: 8px 5px;
             }
+
+            .logo-img {
+                height: 60px;
+                width: 60px;
+            }
+
+            .logo span {
+                font-size: 16px;
+            }
+
             .nav-right {
                 flex-direction: column;
-                gap: 12px;
+                gap: 8px;
                 width: 100%;
             }
+
             .nav-links {
                 flex-direction: row; 
                 width: auto;
@@ -438,14 +450,17 @@
                 padding: 4px 8px;
                 -webkit-overflow-scrolling: touch;
             }
+
             .menu-item:active, .menu-item:hover {
                 width: 145px;
             }
+
             .app-view {
-                margin-top: 195px;
+                margin-top: 220px; /* Prevents sticky navbar from overlapping title headers */
             }
+
             .hero {
-                height: calc(100vh - 195px);
+                height: calc(100vh - 220px);
             }
         }
     </style>
