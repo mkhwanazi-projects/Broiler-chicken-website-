@@ -222,17 +222,17 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* --- Hero Section --- */
+        /* --- Hero Section (Less Zoomed) --- */
         .hero {
-            background-color: #111;
+            background-color: #0d1f17;
             background-image: 
-                linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.55)), 
+                linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.5)), 
                 url('Chickens.jpg');
             background-repeat: no-repeat;
-            background-position: center 42%;
-            background-size: cover;
+            background-position: center center;
+            background-size: contain;
             height: calc(100vh - 140px);
-            min-height: 450px;
+            min-height: 420px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -450,9 +450,9 @@
 
             .hero {
                 height: calc(100vh - 220px);
-                min-height: 400px;
-                background-position: center 38%;
-                background-size: cover;
+                min-height: 380px;
+                background-size: contain;
+                background-position: center center;
             }
 
             #view-about-us img {
@@ -523,8 +523,7 @@
             
             <div style="max-width: 850px; margin: 0 auto; text-align: center;">
                 
-                <!-- Photo -->
-                <img src="Image.jpg" 
+                <img src="about-chickens.jpg" 
                      alt="Our semi-free range chickens at Ntuze Prime Farms" 
                      style="width: 100%; max-width: 700px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
 
@@ -699,4 +698,4 @@
     </script>
 
 </body>
-                                </html>
+</html>
