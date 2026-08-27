@@ -222,7 +222,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* --- Hero Section (MIXED VERSION) --- */
+        /* --- Hero Section --- */
         .hero {
             background-color: #111;
             background-image: 
@@ -454,6 +454,11 @@
                 background-position: center 38%;
                 background-size: cover;
             }
+
+            #view-about-us img {
+                max-width: 100% !important;
+                border-radius: 8px;
+            }
         }
     </style>
 </head>
@@ -511,21 +516,27 @@
         </div>
     </div>
 
-    <!-- ABOUT VIEW (NEW) -->
+    <!-- ABOUT VIEW -->
     <div id="view-about-us" class="app-view">
         <section>
             <h2 class="section-title">About Us</h2>
             
-            <div style="max-width: 800px; margin: 0 auto; text-align: center; line-height: 1.8;">
-                <p style="font-size: 20px; margin-bottom: 25px; color: var(--text-title); font-weight: 600;">
+            <div style="max-width: 850px; margin: 0 auto; text-align: center;">
+                
+                <!-- Photo -->
+                <img src="about-chickens.jpg" 
+                     alt="Our semi-free range chickens at Ntuze Prime Farms" 
+                     style="width: 100%; max-width: 700px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
+
+                <p style="font-size: 20px; margin-bottom: 22px; color: var(--text-title); font-weight: 600; line-height: 1.5;">
                     Ntuze Prime Farm is a youth-owned farm from the rural areas of Kwadlangezwa.
                 </p>
                 
-                <p style="font-size: 18px; margin-bottom: 20px;">
+                <p style="font-size: 18px; margin-bottom: 18px; line-height: 1.7;">
                     We raise <strong>semi-free range chickens</strong> that taste like real home chicken — the kind you grew up eating.
                 </p>
                 
-                <p style="font-size: 17px; color: var(--text-muted);">
+                <p style="font-size: 17px; color: var(--text-muted); line-height: 1.7;">
                     Our birds are raised with care in a clean environment, given quality feed, and allowed space to move. 
                     The result is healthy, flavourful broiler chickens that you can trust for your family or business.
                 </p>
@@ -647,7 +658,7 @@
         }
 
         function goToOrder() {
-            const contactPill = document.querySelectorAll('.menu-item')[4]; // Updated index because we added About
+            const contactPill = document.querySelectorAll('.menu-item')[4];
             switchView('contact', contactPill);
         }
 
@@ -688,4 +699,4 @@
     </script>
 
 </body>
-                                                                </html>
+                                </html>
