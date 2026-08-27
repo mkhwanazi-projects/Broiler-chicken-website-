@@ -25,18 +25,16 @@
             --card-bg: #ffffff;
             --text-color: #333333;
             --text-muted: #666666;
-            --text-title: #05482e; /* Forest Green Title */
+            --text-title: #05482e;
             --header-bg: #ffffff;
             --border-color: #cccccc;
             --input-border: #cccccc;
 
-            /* Palette Extracted from Logo */
-            --accent-color: #05482e; /* Forest Green */
-            --accent-hover: #033220; /* Darker Forest Green */
-            --gold-accent: #c69230;  /* Logo Gold Accent */
+            --accent-color: #05482e;
+            --accent-hover: #033220;
+            --gold-accent: #c69230;
             --gold-hover: #a87922;
 
-            /* Floating Pill Config */
             --pill-bg: rgba(0, 0, 0, 0.06);
             --pill-item-bg: rgba(0, 0, 0, 0.04);
             --pill-active-bg: #05482e;
@@ -51,12 +49,11 @@
             --card-bg: #1e1e1e;
             --text-color: #e0e0e0;
             --text-muted: #aaaaaa;
-            --text-title: #22a06b; /* Brighter Green for Dark Mode */
+            --text-title: #22a06b;
             --header-bg: #1f1f1f;
             --border-color: #444444;
             --input-border: #444444;
 
-            /* Floating Pill Config Dark */
             --pill-bg: rgba(255, 255, 255, 0.07);
             --pill-item-bg: rgba(255, 255, 255, 0.03);
             --pill-active-bg: var(--gold-accent);
@@ -90,11 +87,10 @@
             padding: 12px 20px;
         }
 
-        /* Vertical Logo Container */
         .logo {
             font-size: 20px;
             font-weight: bold;
-            color: var(--accent-color); /* Green text topic */
+            color: var(--accent-color);
             text-decoration: none;
             display: flex;
             flex-direction: column;
@@ -116,7 +112,6 @@
             gap: 20px;
         }
 
-        /* --- Master Expanding Hover Menu Pod --- */
         .nav-links {
             list-style: none;
             display: flex;
@@ -133,7 +128,6 @@
             display: flex;
         }
 
-        /* Base Individual Menu Pill Items */
         .menu-item {
             display: flex;
             align-items: center;
@@ -153,14 +147,12 @@
             transition: width .45s cubic-bezier(.22, 1, .36, 1), background-color .3s ease, box-shadow .3s ease, color .3s;
         }
 
-        /* Center icon */
         .menu-item .material-symbols-outlined {
             font-size: 22px;
             min-width: 24px;
             text-align: center;
         }
 
-        /* Hidden Labels Structure */
         .menu-label {
             opacity: 0;
             max-width: 0;
@@ -168,11 +160,10 @@
             transition: opacity .25s ease, max-width .45s ease, transform .35s ease;
         }
 
-        /* --- Active Style via JavaScript --- */
         .menu-item.active-pill {
             background-color: var(--pill-active-bg) !important;
             color: var(--pill-active-text) !important;
-            width: auto !important; /* Dynamic sizing accommodates long pill text */
+            width: auto !important;
             padding: 0 16px;
             gap: 8px;
             box-shadow: none !important;
@@ -183,7 +174,6 @@
             transform: translateX(0);
         }
 
-        /* Expanding triggers on hover */
         .menu-item:hover:not(.active-pill) {
             width: 160px;
             background-color: rgba(5, 72, 46, 0.1);
@@ -198,7 +188,6 @@
             transform: translateX(0);
         }
 
-        /* --- Theme Toggle Button --- */
         .theme-toggle-btn {
             background: none;
             border: 2px solid var(--accent-color);
@@ -218,7 +207,6 @@
             color: #ffffff;
         }
 
-        /* --- Content Views (Tab Control) --- */
         .app-view {
             display: none;
             margin-top: 140px;
@@ -234,10 +222,17 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* --- Hero Section --- */
+        /* --- Hero Section (MIXED VERSION) --- */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('Chickens.jpg') no-repeat center center/cover;
+            background-color: #111;
+            background-image: 
+                linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.55)), 
+                url('Chickens.jpg');
+            background-repeat: no-repeat;
+            background-position: center 42%;
+            background-size: cover;
             height: calc(100vh - 140px);
+            min-height: 450px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -245,7 +240,6 @@
             text-align: center;
             color: #fff;
             padding: 0 20px;
-            margin-top: 0;
         }
 
         .hero h1 {
@@ -277,7 +271,6 @@
             background-color: var(--gold-hover);
         }
 
-        /* --- Main Content Layout --- */
         section {
             padding: 40px 20px;
             max-width: 1200px;
@@ -289,7 +282,7 @@
             font-size: 32px;
             margin-bottom: 40px;
             position: relative;
-            color: var(--text-title); /* Forest Green Topic Header */
+            color: var(--text-title);
         }
 
         .section-title::after {
@@ -297,11 +290,10 @@
             display: block;
             width: 60px;
             height: 3px;
-            background-color: var(--gold-accent); /* Gold Accent Line Under Topics */
+            background-color: var(--gold-accent);
             margin: 10px auto 0;
         }
 
-        /* --- About / Features Section --- */
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -322,7 +314,6 @@
             color: var(--text-title);
         }
 
-        /* --- Products Section --- */
         .products-container-wrapper {
             max-width: 100%;
         }
@@ -363,7 +354,6 @@
             margin-bottom: 15px;
         }
 
-        /* --- Contact Section --- */
         .contact-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -408,7 +398,6 @@
             border-color: var(--accent-color);
         }
 
-        /* --- Footer --- */
         footer {
             background-color: #032115;
             color: #bbb;
@@ -456,11 +445,14 @@
             }
 
             .app-view {
-                margin-top: 220px; /* Prevents sticky navbar from overlapping title headers */
+                margin-top: 220px;
             }
 
             .hero {
                 height: calc(100vh - 220px);
+                min-height: 400px;
+                background-position: center 38%;
+                background-size: cover;
             }
         }
     </style>
@@ -608,7 +600,6 @@
     </footer>
 
     <script>
-        // --- View Controller Logic ---
         function switchView(viewId, element) {
             const views = document.querySelectorAll('.app-view');
             views.forEach(view => view.classList.remove('active-view'));
@@ -632,7 +623,6 @@
             switchView('contact', contactPill);
         }
 
-        // --- Light / Dark Mode Logic ---
         const themeToggleBtn = document.getElementById('themeToggle');
         
         themeToggleBtn.addEventListener('click', function() {
@@ -647,7 +637,6 @@
             }
         });
 
-        // --- WhatsApp Form Logic ---
         document.getElementById('orderForm').addEventListener('submit', function(e) {
             e.preventDefault(); 
 
