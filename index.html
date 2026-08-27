@@ -474,6 +474,12 @@
                         </div>
                     </li>
                     <li>
+                        <div class="menu-item" onclick="switchView('about-us', this)">
+                            <span class="material-symbols-outlined">info</span>
+                            <span class="menu-label">About</span>
+                        </div>
+                    </li>
+                    <li>
                         <div class="menu-item" onclick="switchView('about', this)">
                             <span class="material-symbols-outlined">star</span>
                             <span class="menu-label">Why Us</span>
@@ -503,6 +509,28 @@
             <h1>Fresh, Healthy Broiler Chickens</h1>
             <p>Locally raised with top-quality feed. Premium weight and unbeatable freshness straight from our farm to your kitchen.</p>
         </div>
+    </div>
+
+    <!-- ABOUT VIEW (NEW) -->
+    <div id="view-about-us" class="app-view">
+        <section>
+            <h2 class="section-title">About Us</h2>
+            
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; line-height: 1.8;">
+                <p style="font-size: 20px; margin-bottom: 25px; color: var(--text-title); font-weight: 600;">
+                    Ntuze Prime Farm is a youth-owned farm from the rural areas of Kwadlangezwa.
+                </p>
+                
+                <p style="font-size: 18px; margin-bottom: 20px;">
+                    We raise <strong>semi-free range chickens</strong> that taste like real home chicken — the kind you grew up eating.
+                </p>
+                
+                <p style="font-size: 17px; color: var(--text-muted);">
+                    Our birds are raised with care in a clean environment, given quality feed, and allowed space to move. 
+                    The result is healthy, flavourful broiler chickens that you can trust for your family or business.
+                </p>
+            </div>
+        </section>
     </div>
 
     <!-- WHY US VIEW -->
@@ -619,7 +647,7 @@
         }
 
         function goToOrder() {
-            const contactPill = document.querySelectorAll('.menu-item')[3];
+            const contactPill = document.querySelectorAll('.menu-item')[4]; // Updated index because we added About
             switchView('contact', contactPill);
         }
 
@@ -660,4 +688,4 @@
     </script>
 
 </body>
-</html>
+                                                                </html>
