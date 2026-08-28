@@ -222,7 +222,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* --- Hero Section (No black bars) --- */
+        /* --- Hero Section --- */
         .hero {
             background-color: #0d1f17;
             background-image: 
@@ -456,8 +456,12 @@
                 background-size: cover;
             }
 
+            /* Make About photos stack nicely on mobile */
+            #view-about-us .photo-row {
+                grid-template-columns: 1fr !important;
+            }
             #view-about-us img {
-                height: 180px !important;
+                height: 200px !important;
             }
         }
     </style>
@@ -523,33 +527,40 @@
             
             <div style="max-width: 900px; margin: 0 auto; text-align: center;">
 
-                <!-- Photo Gallery (4 photos) -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 35px;">
+                <!-- Top 2 Photos -->
+                <div class="photo-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 30px;">
                     <img src="Image2.jpg" alt="Chickens at Ntuze Prime Farms" 
-                         style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.12);">
+                         style="width: 100%; height: 240px; object-fit: cover; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.12);">
                     
                     <img src="Image3.jpg" alt="Our farm chickens" 
-                         style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.12);">
-                    
-                    <img src="Image4.jpg" alt="Semi-free range chickens" 
-                         style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.12);">
-                    
-                    <img src="Image5.jpg" alt="Ntuze Prime Farms chickens" 
-                         style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.12);">
+                         style="width: 100%; height: 240px; object-fit: cover; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.12);">
                 </div>
 
-                <p style="font-size: 20px; margin-bottom: 22px; color: var(--text-title); font-weight: 600; line-height: 1.5;">
-                    Ntuze Prime Farm is a youth-owned farm from the rural areas of Kwadlangezwa.
-                </p>
-                
-                <p style="font-size: 18px; margin-bottom: 18px; line-height: 1.7;">
-                    We raise <strong>semi-free range chickens</strong> that taste like real home chicken — the kind you grew up eating.
-                </p>
-                
-                <p style="font-size: 17px; color: var(--text-muted); line-height: 1.7;">
-                    Our birds are raised with care in a clean environment, given quality feed, and allowed space to move. 
-                    The result is healthy, flavourful broiler chickens that you can trust for your family or business.
-                </p>
+                <!-- Text Content -->
+                <div style="margin-bottom: 35px; padding: 0 10px;">
+                    <p style="font-size: 20px; margin-bottom: 20px; color: var(--text-title); font-weight: 600; line-height: 1.5;">
+                        Ntuze Prime Farm is a youth-owned farm from the rural areas of Kwadlangezwa.
+                    </p>
+                    
+                    <p style="font-size: 18px; margin-bottom: 16px; line-height: 1.7;">
+                        We raise <strong>semi-free range chickens</strong> that taste like real home chicken — the kind you grew up eating.
+                    </p>
+                    
+                    <p style="font-size: 17px; color: var(--text-muted); line-height: 1.7;">
+                        Our birds are raised with care in a clean environment, given quality feed, and allowed space to move. 
+                        The result is healthy, flavourful broiler chickens that you can trust for your family or business.
+                    </p>
+                </div>
+
+                <!-- Bottom 2 Photos -->
+                <div class="photo-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <img src="Image4.jpg" alt="Semi-free range chickens" 
+                         style="width: 100%; height: 240px; object-fit: cover; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.12);">
+                    
+                    <img src="Image5.jpg" alt="Ntuze Prime Farms chickens" 
+                         style="width: 100%; height: 240px; object-fit: cover; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.12);">
+                </div>
+
             </div>
         </section>
     </div>
